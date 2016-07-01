@@ -1,0 +1,40 @@
+title: Pebble build
+summary: Builds a Pebble project
+description: |
+  Builds a [Pebble project](https://developer.pebble.com) after installing SDK (if necessary).
+is_requires_admin_user: false
+is_always_run: false
+inputs:
+- project_path: "."
+  opts:
+    description: |-
+      Specify the path to your Pebble project.
+      Use an empty value to skip building the project and only install the SDK.
+    title: Pebble project path
+- sdk_without_emulator: "yes"
+  opts:
+    description: |-
+      Speed up Pebble SDK installation by skiping the emulator.
+      If you only build your projects, it's safe to do this.
+    title: Install SDK without Emulator?
+    value_options:
+    - "yes"
+    - "no"
+- sdk_without_freetype: "no"
+  opts:
+    description: |-
+      Speed up Pebble SDK installation by skiping Freetype.
+      Only if you don't use any custom fonts, it's safe to set this to "yes".
+    title: Install SDK without FreeType?
+    value_options:
+    - "yes"
+    - "no"
+- sdk_without_node: "no"
+  opts:
+    description: |-
+      Speed up Pebble SDK installation by skiping Node.
+      Only if you don't use Pebble Packages, it's safe to set this to "yes".
+    title: Install SDK without Pebble Packages?
+    value_options:
+    - "yes"
+    - "no"

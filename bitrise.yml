@@ -1,0 +1,10 @@
+format_version: 0.9.8
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+workflows:
+  test:
+    steps:
+      - path::.:
+          title: "relative_pth-stamp-test"
+          inputs:
+              - project_path: "../bitrise-step-pebble-playground"
