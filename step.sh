@@ -27,7 +27,8 @@ else
     echo "Installing pebbke-sdk with options: $SDK_OPTIONS"
     # TODO: replace local homebrew recipe with public one once the PR landed
     #   https://github.com/pebble/homebrew-pebble-sdk/pull/46
-    brew install "$THIS_SCRIPTDIR/pebble-sdk.rb" "$SDK_OPTIONS"
+    cmd="brew install $THIS_SCRIPTDIR/pebble-sdk.rb $SDK_OPTIONS"
+    eval $cmd
 
     # TODO: put markers for analytics and friends
 fi
