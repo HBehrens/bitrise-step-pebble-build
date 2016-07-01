@@ -38,3 +38,12 @@ inputs:
     value_options:
     - "yes"
     - "no"
+- sdk_enable_analytics: "yes"
+  opts:
+    description: |-
+      If set to "yes" (recommended), Pebble collects metrics on your usage of their developer tools.
+      This helps them to help prioritise further development of their tooling.
+    title: Send analytics about SDK usage to Pebble?
+    value_options:
+    - "yes"
+    - "no"

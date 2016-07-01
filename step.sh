@@ -30,7 +30,16 @@ else
     cmd="brew install $THIS_SCRIPTDIR/pebble-sdk.rb $SDK_OPTIONS"
     eval $cmd
 
-    # TODO: put markers for analytics and friends
+    if [ $sdk_analytics_enabled == "yes" ]; then
+        echo "SDK analytics enabled"
+        analytics_file="ENABLE_ANALYTICS"
+    else
+        echo "SDK analytics disabled"
+        analytics_file="NO_TRACKING"
+    fi
+    touch "$HOME/Library/Application Support/Pebble SDK/$analytics_file"
+
+    # TODO: download specific SDK version
 fi
 
 # ---------------------
