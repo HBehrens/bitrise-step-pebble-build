@@ -5,7 +5,7 @@ description: |
 is_requires_admin_user: false
 is_always_run: false
 inputs:
-- project_path: "."
+- project_path: "$BITRISE_SOURCE_DIR"
   opts:
     description: |-
       Specify the path to your Pebble project.
