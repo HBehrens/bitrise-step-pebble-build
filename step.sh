@@ -37,6 +37,7 @@ else
         echo "SDK analytics disabled"
         analytics_file="NO_TRACKING"
     fi
+    mkdir -p "$HOME/Library/Application Support/Pebble SDK"
     touch "$HOME/Library/Application Support/Pebble SDK/$analytics_file"
 
     # TODO: download specific SDK version
