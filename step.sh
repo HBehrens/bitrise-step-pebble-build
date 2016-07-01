@@ -30,7 +30,7 @@ else
     cmd="brew install $THIS_SCRIPTDIR/pebble-sdk.rb $SDK_OPTIONS"
     eval $cmd
 
-    if [ $sdk_analytics_enabled == "yes" ]; then
+    if [ "$sdk_analytics_enabled" == "yes" ]; then
         echo "SDK analytics enabled"
         analytics_file="ENABLE_ANALYTICS"
     else
