@@ -54,7 +54,7 @@ inputs:
     value_options:
     - "yes"
     - "no"
-- sdk_accept_legalese: ""
+- sdk_accept_legalese: "no"
   opts:
     is_expand: true
     description: |-
