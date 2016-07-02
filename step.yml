@@ -47,3 +47,18 @@ inputs:
     value_options:
     - "yes"
     - "no"
+- sdk_accept_legalese: ""
+  opts:
+    is_expand: true
+    description: |-
+      To use the Pebble SDK, you must agree to the following:
+
+      PEBBLE TERMS OF USE
+      https://developer.getpebble.com/legal/terms-of-use
+
+      PEBBLE DEVELOPER LICENSE
+      https://developer.getpebble.com/legal/sdk-license
+    title: Accept Pebble TERMS OF USE and PEBBLE DEVELOPER LICENSE?
+    value_options:
+    - "yes"
+    - "no"

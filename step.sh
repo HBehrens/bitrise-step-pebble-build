@@ -6,6 +6,23 @@ set -e
 THIS_SCRIPTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 # ---------------------
+# Verify the user accepted the license
+# ---------------------
+
+if [ "$sdk_accept_legalese" != "yes" ]; then
+    echo "To use the Pebble SDK, you must agree to the following:"
+    echo ""
+    echo "PEBBLE TERMS OF USE"
+    echo "https://developer.getpebble.com/legal/terms-of-use"
+    echo ""
+    echo "PEBBLE DEVELOPER LICENSE"
+    echo "https://developer.getpebble.com/legal/sdk-license"
+    echo ""
+    echo "Set .sdk_accept_legalese='yes' in your workflow.yml to do so."
+    exit 1
+fi
+
+# ---------------------
 # Install SDK
 # ---------------------
 INSTALLED_SDK=$(brew ls --versions pebble-sdk)
@@ -49,7 +66,8 @@ fi
 if [[ $project_path ]]; then
   echo "Pebble project configured at $project_path"
   pushd "$project_path"
-  pebble build
+  # on the first build, the pebble tool asks for accepting the Developer License
+  yes | pebble build
   popd
 else
   echo "No path for Pebble project specified => skipping build"
