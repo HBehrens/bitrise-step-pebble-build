@@ -2,6 +2,13 @@ title: Pebble build
 summary: Builds a Pebble project
 description: |
   Builds a [Pebble project](https://developer.pebble.com) after installing SDK (if necessary).
+website: https://github.com/HBehrens/bitrise-step-pebble-build
+source_code_url: https://github.com/HBehrens/bitrise-step-pebble-build
+support_url: https://github.com/HBehrens/bitrise-step-pebble-build/issues
+host_os_tags:
+  - osx-10.10
+  - osx-10.11
+  - osx-10.12
 is_requires_admin_user: false
 is_always_run: false
 inputs:
