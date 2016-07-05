@@ -41,7 +41,7 @@ else
     # make brew aware of pebble-qemu
     brew tap pebble/pebble-sdk
 
-    echo "Installing pebbke-sdk with options: $SDK_OPTIONS"
+    echo "Installing pebble-sdk with options: $SDK_OPTIONS"
     # TODO: replace local homebrew recipe with public one once the PR landed
     #   https://github.com/pebble/homebrew-pebble-sdk/pull/46
     cmd="brew install $THIS_SCRIPTDIR/pebble-sdk.rb $SDK_OPTIONS"
